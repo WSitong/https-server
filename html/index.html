@@ -24,6 +24,8 @@ import sys
 from socketserver import ThreadingMixIn
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 
+__all__ = ['HTTPSServer', 'ThreadingHTTPSServer']
+
 
 # 单线程HTTPS Server
 class HTTPSServer(HTTPServer):
