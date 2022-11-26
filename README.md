@@ -35,7 +35,7 @@ http://slproweb.com/products/Win32OpenSSL.html
 ### 生成证书
 首先使用openssl执行如下命令生成一个key
 ```commandline
-openssl genrsa -des3 -out server.key 1024
+openssl genrsa -des3 -out server.key 2048
 ```
 
 建议去除key文件密码，因为每次reload nginx配置时候都要你验证这个PAM密码
