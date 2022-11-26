@@ -40,12 +40,12 @@ openssl genrsa -des3 -out server.key 1024
 
 建议去除key文件密码，因为每次reload nginx配置时候都要你验证这个PAM密码
 ```commandline
-openssl rsa -in server.key -out server.key
+openssl rsa -in server.key -out nginx.key
 ```
 
 根据这个key文件生成证书请求文件nginx.csr
 ```commandline
-openssl req -new -key server.key -out nginx.csr
+openssl req -new -key nginx.key -out nginx.csr
 ```
 
 最后根据这2个文件生成10年crt证书文件
